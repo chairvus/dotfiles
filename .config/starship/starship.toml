@@ -1,0 +1,71 @@
+# ~/.config/starship.toml
+# --- Clean, fast, informative prompt theme for Fish + Kitty ---
+
+# Use Nerd Font symbols (you already have JetBrainsMono Nerd Font)
+add_newline = false
+command_timeout = 2000
+format = "$all$character"
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+vimcmd_symbol = "[❮](bold blue)"
+
+[username]
+disabled = false
+format = "[$user](bold blue)"
+show_always = false
+
+[hostname]
+disabled = false
+ssh_only = true
+format = "[@$hostname](bold purple) "
+
+[directory]
+format = "[📂 $path]($style)"
+style = "bold cyan"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[git_branch]
+format = "[ $branch]($style)"
+style = "bold yellow"
+truncation_length = 20
+
+[git_status]
+format = '([$all_status]($style) )'
+style = "bold red"
+disabled = false
+
+[python]
+format = '[🐍 $virtualenv]($style) '
+style = 'bold green'
+
+[nodejs]
+format = '[ $version]($style) '
+style = 'bold green'
+
+[docker_context]
+format = '[🐳 $context]($style) '
+style = 'bold blue'
+
+[cmd_duration]
+format = '[⏱ $duration]($style) '
+style = 'bold white'
+
+[time]
+format = '[🕒 $time]($style) '
+style = 'dimmed white'
+disabled = false
+
+[status]
+style = 'bold red'
+format = '[✖ $status]($style) '
+disabled = false
+
+# --- Optional tweaks for clarity ---
+[package]
+disabled = true
+
+[battery]
+disabled = true

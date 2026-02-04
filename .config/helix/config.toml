@@ -1,0 +1,50 @@
+[editor]
+clipboard-provider = "pasteboard"   # macOS clipboard
+auto-completion = true              # aktifkan auto-complete popup
+auto-format = true                  # ✅ format otomatis saat :w (save)
+line-number = "relative"
+mouse = true
+true-color = true
+
+[editor.lsp]
+display-messages = true
+display-inlay-hints = true
+
+# Manual trigger (INSERT MODE)
+[keys.insert]
+C-space = "completion"
+A-s = "signature_help"
+
+# ---------- NORMAL MODE ----------
+[keys.normal]
+C-c = "yank_to_clipboard"
+C-a = ["select_all"]
+C-S-down = ["extend_to_line_bounds", "yank", "paste_after", "collapse_selection"]
+C-S-up   = ["extend_to_line_bounds", "yank", "paste_before", "collapse_selection"]
+D = ["extend_to_line_bounds", "delete_selection"]
+C-D = ["extend_to_line_bounds", "yank_to_clipboard", "delete_selection"]
+
+#comment
+"C-/" = ["toggle_comments"]
+
+# ✅ Save
+C-s = [":w"]
+C-q = [":q!"]
+
+# Optional: format manual kalau kamu mau ngetes
+F = [":format"]
+
+q = [":q"]
+u = "undo"
+C-r = "redo"
+"C-space" = ["insert_mode", "completion"]
+
+# ---------- SELECT MODE ----------
+[keys.select]
+C-c = "yank_to_clipboard"
+C-a = ["select_all"]
+u = "undo"
+C-r = "redo"
+"C-S-down" = ["extend_to_line_bounds", "yank", "paste_after", "collapse_selection"]
+"C-S-up"   = ["extend_to_line_bounds", "yank", "paste_before", "collapse_selection"]
+C-s = [":w"]

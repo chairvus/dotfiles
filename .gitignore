@@ -1,0 +1,11 @@
+# game / large data
+.config/StardewValley
+
+# fish runtime (optional, comment if you want to track it)
+.config/fish_variables
+
+# cache / temp
+*.log
+*.tmp
+.DS_Store
+

@@ -1,0 +1,107 @@
+
+# -------------- Language Servers --------------
+[language-server.pyright]
+command = "pyright-langserver"
+args = ["--stdio"]
+
+[language-server.tinymist]
+command = "tinymist"
+args = ["lsp"]
+
+[language-server.tsserver]
+command = "typescript-language-server"
+args = ["--stdio"]
+
+
+[language-server.vscode-json]
+command = "vscode-json-language-server"
+args = ["--stdio"]
+
+
+[language-server.vscode-html]
+command = "vscode-html-language-server"
+args = ["--stdio"]
+
+
+[language-server.vscode-css]
+command = "vscode-css-language-server"
+args = ["--stdio"]
+
+
+[language-server.yaml]
+command = "yaml-language-server"
+args = ["--stdio"]
+
+
+[language-server.bash]
+command = "bash-language-server"
+args = ["start"]
+
+
+[language-server.taplo]
+command = "taplo"
+args = ["lsp", "stdio"]
+
+
+[language-server.marksman]
+command = "marksman"
+args = ["server"]
+
+
+# -------------- Language Associations --------------
+[[language]]
+name = "python"
+auto-format = true
+formatter = { command = "ruff", args = ["format", "-"] }
+language-servers = ["pyright"]
+
+[[language]]
+name = "typst"
+scope = "source.typst"
+file-types = ["typ", "typst"]
+language-servers = ["tinymist"]
+auto-format = true
+
+[[language]]
+name = "javascript"
+language-servers = ["tsserver"]
+
+
+[[language]]
+name = "typescript"
+language-servers = ["tsserver"]
+
+
+[[language]]
+name = "json"
+language-servers = ["vscode-json"]
+
+
+[[language]]
+name = "html"
+language-servers = ["vscode-html"]
+
+
+[[language]]
+name = "css"
+language-servers = ["vscode-css"]
+
+
+[[language]]
+name = "yaml"
+language-servers = ["yaml"]
+
+
+[[language]]
+name = "bash"
+language-servers = ["bash"]
+
+
+[[language]]
+name = "toml"
+language-servers = ["taplo"]
+
+
+[[language]]
+name = "markdown"
+language-servers = ["marksman"]
