@@ -1,0 +1,1 @@
+conf.d/fish_frozen_key_bindings.fish
