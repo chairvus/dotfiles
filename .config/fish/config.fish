@@ -206,3 +206,6 @@ if type -q eza
     alias lg="eza -lh --git"
     alias lt="eza --tree --level=2"
 end
+
+# Added by Antigravity
+fish_add_path /Users/artha/.antigravity/antigravity/bin

@@ -5,3 +5,7 @@ end
 function rs
     sudo shutdown -r now
 end
+
+function sl
+    sudo pmset sleepnow
+end
