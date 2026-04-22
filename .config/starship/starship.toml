@@ -3,6 +3,7 @@
 
 # Use Nerd Font symbols (you already have JetBrainsMono Nerd Font)
 add_newline = false
+scan_timeout = 1000
 command_timeout = 2000
 format = "$all$character"
 
