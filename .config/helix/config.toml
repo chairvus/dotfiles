@@ -1,14 +1,20 @@
 [editor]
 clipboard-provider = "pasteboard"   # macOS clipboard
 auto-completion = true              # aktifkan auto-complete popup
-auto-format = true                  # ✅ format otomatis saat :w (save)
+auto-format = true                  # format otomatis saat :w (save)
 line-number = "relative"
 mouse = true
 true-color = true
+end-of-line-diagnostics = "hint"    # teks singkat di ujung baris, tidak panjang
 
 [editor.lsp]
-display-messages = true
+display-messages = false            # sembunyikan progress LSP ("indexing...", dll)
+display-progress-messages = false   # sembunyikan loading bar LSP
 display-inlay-hints = true
+
+[editor.inline-diagnostics]
+cursor-line = "warning"             # error/warning hanya muncul di baris kursor
+other-lines = "disable"             # baris lain bersih total
 
 # Manual trigger (INSERT MODE)
 [keys.insert]
@@ -23,17 +29,13 @@ C-S-down = ["extend_to_line_bounds", "yank", "paste_after", "collapse_selection"
 C-S-up   = ["extend_to_line_bounds", "yank", "paste_before", "collapse_selection"]
 D = ["extend_to_line_bounds", "delete_selection"]
 C-D = ["extend_to_line_bounds", "yank_to_clipboard", "delete_selection"]
-
-#comment
+# comment
 "C-/" = ["toggle_comments"]
-
-# ✅ Save
+# Save & Quit
 C-s = [":w"]
 C-q = [":q!"]
-
-# Optional: format manual kalau kamu mau ngetes
+# Format manual
 F = [":format"]
-
 q = [":q"]
 u = "undo"
 C-r = "redo"
