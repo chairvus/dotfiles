@@ -5,7 +5,18 @@ auto-format = true                  # format otomatis saat :w (save)
 line-number = "relative"
 mouse = true
 true-color = true
+scrolloff = 8                       # kursor tetap di tengah saat scroll
+cursorline = true                   # highlight baris kursor
+color-modes = true                  # warna cursor berubah sesuai mode
 end-of-line-diagnostics = "hint"    # teks singkat di ujung baris, tidak panjang
+
+[editor.cursor-shape]
+insert = "bar"                      # cursor garis tipis saat INSERT (seperti VS Code)
+normal = "block"
+select = "underline"
+
+[editor.indent-guides]
+render = true                       # tampilkan garis indent
 
 [editor.lsp]
 display-messages = false            # sembunyikan progress LSP ("indexing...", dll)
@@ -16,7 +27,7 @@ display-inlay-hints = true
 cursor-line = "warning"             # error/warning hanya muncul di baris kursor
 other-lines = "disable"             # baris lain bersih total
 
-# Manual trigger (INSERT MODE)
+# ---------- INSERT MODE ----------
 [keys.insert]
 C-space = "completion"
 A-s = "signature_help"
@@ -24,7 +35,7 @@ A-s = "signature_help"
 # ---------- NORMAL MODE ----------
 [keys.normal]
 C-c = "yank_to_clipboard"
-C-a = ["select_all"]
+C-a = ["select_all"]               # ⚠️ override default increment number (C-a)
 C-S-down = ["extend_to_line_bounds", "yank", "paste_after", "collapse_selection"]
 C-S-up   = ["extend_to_line_bounds", "yank", "paste_before", "collapse_selection"]
 D = ["extend_to_line_bounds", "delete_selection"]
@@ -36,17 +47,12 @@ C-s = [":w"]
 C-q = [":q!"]
 # Format manual
 F = [":format"]
-q = [":q"]
-u = "undo"
-C-r = "redo"
-"C-space" = ["insert_mode", "completion"]
+# ✅ q dihapus dari :q — pakai C-q atau ZQ agar macro recording tetap bisa dipakai
 
 # ---------- SELECT MODE ----------
 [keys.select]
 C-c = "yank_to_clipboard"
 C-a = ["select_all"]
-u = "undo"
-C-r = "redo"
 "C-S-down" = ["extend_to_line_bounds", "yank", "paste_after", "collapse_selection"]
 "C-S-up"   = ["extend_to_line_bounds", "yank", "paste_before", "collapse_selection"]
 C-s = [":w"]
