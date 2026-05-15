@@ -34,6 +34,7 @@ A-s = "signature_help"
 
 # ---------- NORMAL MODE ----------
 [keys.normal]
+q = [":wq"]
 C-c = "yank_to_clipboard"
 C-a = ["select_all"]               # ⚠️ override default increment number (C-a)
 C-S-down = ["extend_to_line_bounds", "yank", "paste_after", "collapse_selection"]
