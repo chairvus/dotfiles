@@ -223,3 +223,6 @@ else
 end
 # <<< conda initialize <<<
 
+alias yazi="PATH=/opt/homebrew/bin:$PATH yazi"
+alias yazi="PATH=/opt/homebrew/bin:$PATH yazi"
+alias yazi="PATH=/opt/homebrew/bin:$PATH yazi"
