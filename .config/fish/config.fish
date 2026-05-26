@@ -213,16 +213,18 @@ fish_add_path /Users/artha/.antigravity/antigravity/bin
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 if test -f /opt/homebrew/Caskroom/miniforge/base/bin/conda
-    eval /opt/homebrew/Caskroom/miniforge/base/bin/conda "shell.fish" "hook" $argv | source
+    eval /opt/homebrew/Caskroom/miniforge/base/bin/conda "shell.fish" hook $argv | source
 else
     if test -f "/opt/homebrew/Caskroom/miniforge/base/etc/fish/conf.d/conda.fish"
         . "/opt/homebrew/Caskroom/miniforge/base/etc/fish/conf.d/conda.fish"
     else
-        set -x PATH "/opt/homebrew/Caskroom/miniforge/base/bin" $PATH
+        set -x PATH /opt/homebrew/Caskroom/miniforge/base/bin $PATH
     end
 end
 # <<< conda initialize <<<
-
-alias yazi="PATH=/opt/homebrew/bin:$PATH yazi"
-alias yazi="PATH=/opt/homebrew/bin:$PATH yazi"
-alias yazi="PATH=/opt/homebrew/bin:$PATH yazi"
+function yazi
+    kitty @ action goto_layout stack
+    sleep 0.3
+    PATH=/opt/homebrew/bin:$PATH command yazi $argv
+    kitty @ action goto_layout fat
+end
