@@ -16,10 +16,7 @@ keymap = [
 	{ on = "k", run = "arrow prev", desc = "Previous file" },
 	{ on = "j", run = "arrow next", desc = "Next file" },
 
-	{ on = "<Up>",   run = "arrow prev", desc = "Previous file" },
-	{ on = "<Down>", run = "arrow next", desc = "Next file" },
-
-	{ on = "<C-u>", run = "arrow -50%",  desc = "Move cursor up half page" },
+		{ on = "<C-u>", run = "arrow -50%",  desc = "Move cursor up half page" },
 	{ on = "<C-d>", run = "arrow 50%",   desc = "Move cursor down half page" },
 	{ on = "<C-b>", run = "arrow -100%", desc = "Move cursor up one page" },
 	{ on = "<C-f>", run = "arrow 100%",  desc = "Move cursor down one page" },
@@ -36,10 +33,7 @@ keymap = [
 	{ on = "h", run = "leave", desc = "Back to the parent directory" },
 	{ on = "l", run = "enter", desc = "Enter the child directory" },
 
-	{ on = "<Left>",  run = "leave", desc = "Back to the parent directory" },
-	{ on = "<Right>", run = "enter", desc = "Enter the child directory" },
-
-	{ on = "H", run = "back",    desc = "Back to previous directory" },
+		{ on = "H", run = "back",    desc = "Back to previous directory" },
 	{ on = "L", run = "forward", desc = "Forward to next directory" },
 
 	# Toggle
@@ -125,7 +119,8 @@ keymap = [
 
 	# Goto
 	{ on = [ "g", "h" ],       run = "cd ~",             desc = "Go home" },
-	{ on = [ "g", "c" ],       run = "cd ~/.config",     desc = "Go ~/.config" },
+	{ on = [ "g", "m" ], run = "cd ~/MINE",      desc = "Go ~/MINE" },
+	{ on = [ "g", "." ], run = "cd ~/.dotfiles", desc = "Go dotfiles" },
 	{ on = [ "g", "d" ],       run = "cd ~/Downloads",   desc = "Go ~/Downloads" },
 	{ on = [ "g", "i" ], run = "cd ~/Library/Mobile\\ Documents/com~apple~CloudDocs", desc = "Go to iCloud" },
 	{ on = [ "g", "<Space>" ], run = "cd --interactive", desc = "Jump interactively" },
@@ -193,12 +188,7 @@ keymap = [
 	{ on = "h", run = "swipe prev", desc = "Swipe to previous file" },
 	{ on = "l", run = "swipe next", desc = "Swipe to next file" },
 
-	{ on = "<Up>",    run = "arrow prev", desc = "Previous line" },
-	{ on = "<Down>",  run = "arrow next", desc = "Next line" },
-	{ on = "<Left>",  run = "swipe prev", desc = "Swipe to previous file" },
-	{ on = "<Right>", run = "swipe next", desc = "Swipe to next file" },
-
-	# Copy
+		# Copy
 	{ on = [ "c", "c" ], run = "copy cell", desc = "Copy selected cell" },
 
 	# Help
@@ -249,8 +239,6 @@ keymap = [
 	# Character-wise movement
 	{ on = "h",       run = "move -1", desc = "Move back a character" },
 	{ on = "l",       run = "move 1",  desc = "Move forward a character" },
-	{ on = "<Left>",  run = "move -1", desc = "Move back a character" },
-	{ on = "<Right>", run = "move 1",  desc = "Move forward a character" },
 	{ on = "<C-b>",   run = "move -1", desc = "Move back a character" },
 	{ on = "<C-f>",   run = "move 1",  desc = "Move forward a character" },
 
