@@ -31,6 +31,15 @@ image_quality   = 75
 ueberzug_scale  = 1
 ueberzug_offset = [0, 0, 0, 0]
 
+
+# =========================
+# Previewers
+# =========================
+[plugin]
+prepend_previewers = [
+  { mime = "image/heic", run = "magick" },
+]
+
 # =========================
 # OPENER (INI KUNCI 🔥)
 # =========================
