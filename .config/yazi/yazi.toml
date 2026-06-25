@@ -30,24 +30,12 @@ image_filter    = "triangle"
 image_quality   = 75
 ueberzug_scale  = 1
 ueberzug_offset = [0, 0, 0, 0]
-
-
-# =========================
-# Previewers
-# =========================
-[plugin]
-prepend_previewers = [
-  { mime = "image/heic", run = "magick" },
-]
+image_protocol  = "kitty"
 
 # =========================
-# OPENER (INI KUNCI 🔥)
+# OPENER
 # =========================
 [opener]
-edit = [
-  { run = "/opt/homebrew/bin/hx %s", desc = "Helix", for = "unix", block = true }
-]
-
 
 # PLAY
 play = [
@@ -123,3 +111,11 @@ cursor_blink = false
 [confirm]
 trash_title = "Trash selected files?"
 delete_title = "Delete permanently?"
+
+[plugin]
+prepend_previewers = [
+  { mime = "image/heic", run = "heic" },
+]
+prepend_preloaders = [
+  { mime = "image/heic", run = "heic" },
+]
