@@ -119,6 +119,10 @@ function fg
     end
 end
 
+if not pgrep -x mpd >/dev/null
+    mpd ~/.config/mpd/mpd.conf
+end
+
 # -------------------------------------------------
 # 6) Key bindings
 # -------------------------------------------------
