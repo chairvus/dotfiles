@@ -119,7 +119,7 @@ keymap = [
 
 	# Goto
 	{ on = [ "g", "h" ],       run = "cd ~",             desc = "Go home" },
-	{ on = [ "g", "m" ], run = "cd ~/MINE",      desc = "Go ~/MINE" },
+	{ on = [ "g", "m" ], run = "cd ~/Arth",      desc = "Go ~/Arth" },
 	{ on = [ "g", "." ], run = "cd ~/.dotfiles", desc = "Go dotfiles" },
 	{ on = [ "g", "d" ],       run = "cd ~/Downloads",   desc = "Go ~/Downloads" },
 	{ on = [ "g", "i" ], run = "cd ~/Library/Mobile\\ Documents/com~apple~CloudDocs", desc = "Go to iCloud" },
