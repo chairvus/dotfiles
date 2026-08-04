@@ -27,6 +27,9 @@ display-inlay-hints = true
 cursor-line = "warning"             # error/warning hanya muncul di baris kursor
 other-lines = "disable"             # baris lain bersih total
 
+[editor.soft-wrap]
+enable = true
+
 # ---------- INSERT MODE ----------
 [keys.insert]
 C-space = "completion"
