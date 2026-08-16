@@ -241,6 +241,8 @@ keymap = [
 	{ on = "l",       run = "move 1",  desc = "Move forward a character" },
 	{ on = "<C-b>",   run = "move -1", desc = "Move back a character" },
 	{ on = "<C-f>",   run = "move 1",  desc = "Move forward a character" },
+	{ on = "<Left>",  run = "move -1", desc = "Move back a character" },
+  { on = "<Right>", run = "move 1",  desc = "Move forward a character" },
 
 	# Word-wise movement
 	{ on = "b",         run = "backward",                    desc = "Move back to the start of the current or previous word" },
